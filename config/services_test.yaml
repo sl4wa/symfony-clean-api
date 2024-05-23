@@ -1,0 +1,15 @@
+imports:
+    - { resource: services.yaml }
+
+services:
+    # Make all services public for testing purposes
+    App\:
+        resource: '../src/*'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+            - '../src/Domain/DTO/'
+        public: true
+        autowire: true
+        autoconfigure: true
