@@ -1,5 +1,5 @@
 imports:
-    - { resource: services.yaml }
+    - { resource: services_common.yaml }
 
 services:
     # Make all services public for testing purposes
@@ -7,7 +7,7 @@ services:
         resource: '../src/*'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
+            - '../src/Domain/Entity/'
             - '../src/Kernel.php'
             - '../src/Domain/DTO/'
         public: true
